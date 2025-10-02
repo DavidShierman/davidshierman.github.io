@@ -1,47 +1,50 @@
-/* Container for buttons */
-.project-buttons {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* align vertically */
-  gap: 30px;                 /* space between buttons */
-  flex-wrap: wrap;           /* allow wrapping on smaller screens */
-  margin-top: 40px;
+/* Whole page background */
+body {
+  margin: 0;
+  background-color: #1b1f27; /* dark gray-blue */
+  font-family: 'Poppins', 'Inter', sans-serif; /* softer font */
+  color: white;
 }
 
-/* Button styles */
-.project-btn {
+/* Container for project tiles */
+.project-sections {
   display: flex;
-  flex-direction: column;    /* stack text + subtext */
-  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* full screen height */
+}
+
+/* Each tile (button section) */
+.project-tile {
+  flex: 1; /* each tile takes up 1/3 of the screen */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 220px;              /* button width */
-  height: 140px;             /* button height */
+  align-items: center;
   text-decoration: none;
-  border: 2px solid #444;    /* subtle border */
-  border-radius: 12px;       /* rounded corners */
-  background-color: #1e1e1e; /* match background */
   color: white;
-  box-shadow: none;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
   transition: all 0.3s ease;
+  background-color: #1b1f27; /* match bg */
 }
 
-/* Button hover effect */
-.project-btn:hover {
-  border-color: #00aaff;   /* glowing border */
-  box-shadow: 0 0 15px #00aaff; 
-  transform: translateY(-4px); /* slight lift */
+/* Hover glow effect */
+.project-tile:hover {
+  border-color: #00aaff;
+  box-shadow: inset 0 0 20px #00aaff44, 0 0 15px #00aaff66;
 }
 
-/* Main button text */
-.project-btn .btn-text {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 5px;
+/* Main text */
+.tile-text {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
-/* Subtext under button label */
-.project-btn .btn-subtext {
-  font-size: 0.9em;
-  color: #aaa;  /* lighter gray */
+/* Subtext */
+.tile-subtext {
+  font-size: 1em;
+  color: #aaa; /* lighter gray for softer look */
+  text-align: center;
 }
