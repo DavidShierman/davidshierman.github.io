@@ -1,24 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Shierman - Home</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #1e2a38; /* dark gray-blue */
+  color: #f1f1f1;
+  padding: 0 20px;
+}
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <hr>
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #2e3e52;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-  <h1>Welcome to My Portfolio</h1>
-  <p>I’m David Shierman, a senior in high school preparing for college in mechanical engineering. I love robotics, CAD design, and hands-on engineering projects.</p>
-  <p>Fun fact: I just finished building a cardboard boat for my engineering class competition!</p>
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 16px;
+  background-color: #2e3e52;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
 
-</body>
-</html>
+nav a:hover {
+  background-color: #3e5573;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #ccc; /* softer subtext color */
+  line-height: 1.6;
+}
