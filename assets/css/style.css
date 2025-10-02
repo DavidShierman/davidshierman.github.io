@@ -1,66 +1,47 @@
-/* === General Page Styles === */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-/* === Navigation Bar === */
-nav {
-  background-color: #222;
-  padding: 15px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* === Headings === */
-h1, h2, h3 {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* === Paragraphs === */
-p {
-  max-width: 800px;
-  margin: 10px auto;
-  padding: 0 20px;
-  line-height: 1.6;
-}
-
-/* === Project Buttons Section === */
+/* Container for buttons */
 .project-buttons {
-  text-align: center;
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* align vertically */
+  gap: 30px;                 /* space between buttons */
+  flex-wrap: wrap;           /* allow wrapping on smaller screens */
+  margin-top: 40px;
 }
 
+/* Button styles */
 .project-btn {
-  display: inline-block;
-  background-color: #0077cc;
-  color: white;
+  display: flex;
+  flex-direction: column;    /* stack text + subtext */
+  align-items: center;
+  justify-content: center;
+  width: 220px;              /* button width */
+  height: 140px;             /* button height */
   text-decoration: none;
-  padding: 14px 28px;
-  margin: 10px;
-  border-radius: 10px;  /* Rounded edges */
-  font-weight: bold;
-  font-size: 1.1em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* soft shadow */
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  border: 2px solid #444;    /* subtle border */
+  border-radius: 12px;       /* rounded corners */
+  background-color: #1e1e1e; /* match background */
+  color: white;
+  box-shadow: none;
+  transition: all 0.3s ease;
 }
 
+/* Button hover effect */
 .project-btn:hover {
-  background-color: #005fa3;
-  transform: translateY(-3px);  /* lift button */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* deeper shadow */
+  border-color: #00aaff;   /* glowing border */
+  box-shadow: 0 0 15px #00aaff; 
+  transform: translateY(-4px); /* slight lift */
+}
+
+/* Main button text */
+.project-btn .btn-text {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* Subtext under button label */
+.project-btn .btn-subtext {
+  font-size: 0.9em;
+  color: #aaa;  /* lighter gray */
 }
