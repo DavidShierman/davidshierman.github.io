@@ -1,3 +1,51 @@
+/* Body & font */
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #1e2a38; /* DARK GRAY-BLUE */
+  color: #f1f1f1;
+  padding: 0 20px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #2e3e52; /* match buttons */
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 16px;
+  background-color: #2e3e52;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background-color: #3e5573;
+}
+
+/* Headings & subtext */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 30px;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: #ccc; /* lighter gray */
+  margin-bottom: 20px;
+}
+
+/* Project cards */
 .project-list {
   display: flex;
   flex-direction: column;
@@ -6,9 +54,15 @@
 }
 
 .project-card {
-  background-color: #2e3e52; /* same gray-blue as buttons */
+  background-color: #2e3e52; /* same as navbar/buttons */
   padding: 20px;
   border-radius: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  background-color: #3e5573;
+  transform: translateY(-3px);
 }
 
 .project-card a {
@@ -19,7 +73,7 @@
 }
 
 .project-card a:hover {
-  color: #3e5573;
+  color: #f1f1f1;
 }
 
 .project-card p {
